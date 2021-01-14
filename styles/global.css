@@ -25,3 +25,9 @@ img {
   max-width: 100%;
   display: block;
 }
+
+figure{
+  text-align:center;
+  margin: 0px;
+}
+figcaption{color:grey;font:14px arial;margin-bottom:30px;}
