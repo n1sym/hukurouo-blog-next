@@ -16,20 +16,7 @@ export function getSortedPostsData() {
 
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
-    let fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // convert YAML
-    let title = fileContents.split('\n')[1].split(': ')[1]
-    let validTitle = ''
-    if (title[0] !== "'"){
-      validTitle = "---\ntitle: '" + title + "'\n---\n"
-    } else {
-      validTitle = "---\ntitle: " + title + "\n---\n"
-    }
-    let bodyStr = fileContents.split('---')[2]
-    //console.log(validTitle + bodyStr)
-    //fileContents = validTitle + bodyStr
-
+    const fileContents = convertYAML(fs.readFileSync(fullPath, 'utf8'))
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
@@ -40,13 +27,25 @@ export function getSortedPostsData() {
     }
   })
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
+  return allPostsData.reverse()
+}
+
+function convertYAML(fileContents){
+  const keys = fileContents.split('---')[1].split('\n').filter((ele)=>{
+    if (ele.includes(':')){return ele}
+  })
+  const body = fileContents.split('---')[2]
+  let header = '---\n'
+  keys.forEach((element)=>{
+    if (element[element.length-1] === "'"){
+      header += element + '\n'
     } else {
-      return -1
+      const key = element.split(': ')[0]
+      const value = element.split(': ')[1]
+      header += key + ": '" + value + "'\n"
     }
   })
+  return fileContents = header + '---\n' + body
 }
 
 export function getAllPostIds() {
@@ -74,9 +73,9 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const fileContents = convertYAML(fs.readFileSync(fullPath, 'utf8'))
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
