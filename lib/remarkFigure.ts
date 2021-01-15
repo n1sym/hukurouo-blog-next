@@ -7,6 +7,7 @@ const isAbsolutePath = (value) => value.startsWith('/')
 const isRelativePath = (value) =>
   value.startsWith('./') || value.startsWith('../')
 const isImgPath = (value) => isAbsolutePath(value) || isRelativePath(value)
+// @ts-ignore
 const isInteractive = convert(['link', 'linkReference'])
 
 export const images = () => {
@@ -37,29 +38,10 @@ function ontext(node, parents) {
       }
     }
 
-    let next = {
-      type: 'image',
-      url: imgPath,
-      title: null,
-      alt: null,
-      position: node.position
-    }
-
     const figure = {
       type: 'html',
       position: node.position,
-      value: `<figure><img src="${imgPath}"><figcaption>${caption}</figcaption></figure>`,
-    }
-
-    // Add a link if we’re not already in one.
-    if (!interactive) {
-      next = {
-        type: 'link',
-        url: imgPath,
-        title: null,
-        children: [next],
-        position: node.position
-      }
+      value: `<figure><img src="${imgPath}" alt="${caption}"><figcaption>${caption}</figcaption></figure>`,
     }
 
     siblings[siblings.indexOf(node)] = figure

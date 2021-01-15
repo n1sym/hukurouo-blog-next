@@ -1,8 +1,8 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
-import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import styles from './post.module.css'
 
 export default function Post({ postData }) {
   return (
@@ -10,9 +10,9 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+      <article className={`${styles.article} mt-16`}>
+        <h1 className="text-3xl font-bold my-2">{postData.title}</h1>
+        <div className="text-gray-500">
           {postData.date}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

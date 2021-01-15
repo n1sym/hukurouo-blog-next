@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'hukurouo.com 🦉'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'hukurouo.com'
 
 type typeLayout = {
   children: React.ReactNode
@@ -46,7 +46,7 @@ export default function Layout({ children, home }: typeLayout) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="mb-24 mt-12">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
