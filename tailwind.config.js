@@ -8,7 +8,7 @@ module.exports = {
         'green-h3': '#75b88e',
       },
       fontSize: {
-        'xs': '.7rem',
+        'xs': '.75rem',
         'tiny': '.8rem',
       },
       borderWidth: {
