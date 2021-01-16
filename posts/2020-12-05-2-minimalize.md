@@ -1,6 +1,6 @@
 ---
 title: ブログを軽量化した
-date: 2020-12-05 01:00:00
+date: 2020-12-05
 categories: 技術
 tags: []
 toc_flg: true

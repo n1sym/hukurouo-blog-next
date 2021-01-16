@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import styles from './post.module.css'
+import styles from './articles.module.css'
 
 export default function Post({ postData }) {
   return (
@@ -12,7 +12,7 @@ export default function Post({ postData }) {
       </Head>
       <article className={`${styles.article} mt-16 mb-20`}>
         <h1 className="text-3xl font-bold my-2">{postData.title}</h1>
-        <div className="text-gray-500">
+        <div className="text-gray-500 mb-8">
           {postData.date}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

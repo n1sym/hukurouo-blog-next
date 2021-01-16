@@ -8,10 +8,20 @@ import { links } from './remarkLink'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData() {
+type PostItem = {
+  id: string
+  title: string
+  date: string
+  categories: string
+  tags: string[]
+  description?: string
+  toc_flg?: boolean
+  thumbnail?: string
+}
+
+export function getSortedPostsData(page: string) {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory)
-  //console.log(fileNames)
+  const fileNames = fs.readdirSync(postsDirectory).reverse()
   const allPostsData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
@@ -26,10 +36,11 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data
-    }
+    } as PostItem
   })
   // Sort posts by date
-  return allPostsData.reverse()
+  const pageNum = Number(page) - 1
+  return allPostsData.filter(data => !data.tags.includes("advent")).slice(20*pageNum, 20 + 20*pageNum)
 }
 
 function convertYAML(fileContents){
@@ -48,6 +59,19 @@ function convertYAML(fileContents){
     }
   })
   return fileContents = header + '---\n' + body
+}
+
+export function getAllPages(){
+  const fileNames = fs.readdirSync(postsDirectory)
+  const pagesCount = (fileNames.length) / 20
+  console.log(pagesCount)
+  return [1,2,3,4,5,6,7,8,9,10].map(fileName => {
+    return {
+      params: {
+        page: String(fileName)
+      }
+    }
+  })
 }
 
 export function getAllPostIds() {

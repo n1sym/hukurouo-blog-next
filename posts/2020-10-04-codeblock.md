@@ -22,7 +22,7 @@ https://github.com/PrismJS/prism-themes
 
 背景が黒地のだと白黒でちかちかしてしまうので、lightなやつが良いな。ということで`ghcolors`を選んでみました。
 
-```js[nuxt.config.js]
+```js[]
 content: {
     markdown: {
       prism: {

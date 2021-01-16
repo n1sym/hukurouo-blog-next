@@ -10,7 +10,7 @@ tags: []
 
 以下、はてなブログのエクスポートデータからmdファイルを生成するコードです。本文ははてなキーワード汚染が酷かったので直接コピペしてました。
 
-```rb[nizigazou.rb]
+```rb[]
 Encoding.default_external = 'utf-8'
 data = ""
 

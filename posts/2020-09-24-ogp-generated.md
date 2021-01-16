@@ -17,7 +17,8 @@ nuxtのOGPについてはこの記事が詳しいです。
 
 nuxt/contentでは動的にコンテンツを生成しているので、各ページで自動でmetaタグを設定できるようにしたいです。まずはmixinファイルを作成します。
 
-```js{1,3-5}[assets/mixins/meta.js]
+assets/mixins/meta.js
+```js
 export default {
   data() {
     return {
@@ -56,7 +57,8 @@ export default {
 
 あとはこれを`_slug`でimportして起動させます。
 
-```js{1,3-5}[pages/articles/_slug.vue]
+pages/articles/_slug.vue
+```js
 import Meta from '~/assets/mixins/meta'
 export default {
   async asyncData ({ $content, params }) {
