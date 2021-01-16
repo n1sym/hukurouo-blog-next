@@ -23,7 +23,7 @@
   }
   ol,
   ul {
-    @apply list-disc my-4 pl-6;
+    @apply list-disc leading-relaxed pl-6;
   }
   li {
     @apply my-1;
@@ -43,6 +43,9 @@
   pre code {
     @apply bg-transparent p-0 leading-6 block;
   }
+  blockquote{
+    @apply border-l-4 border-gray-300 text-gray-600 pl-3 py-0.5 bg-gray-100;
+  }
   img {
     @apply sm:max-w-lg mx-auto mt-8;
   }
@@ -50,6 +53,6 @@
     @apply text-center;
   }
   figcaption{
-    @apply text-gray-400 mb-12 text-base;
+    @apply text-gray-400 mt-2 mb-12 text-base;
   }
 }

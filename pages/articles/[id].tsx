@@ -10,9 +10,9 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className={`${styles.article} mt-16 mb-20`}>
-        <h1>{postData.title}</h1>
-        <div className="text-gray-500 mb-8">
+      <article className={`${styles.article} mt-16 mb-16`}>
+        <div className="text-2xl font-bold leading-snug	">{postData.title}</div>
+        <div className="text-gray-500 mt-2 mb-8">
           {postData.date}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
