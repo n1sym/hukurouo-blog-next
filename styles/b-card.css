@@ -1,0 +1,56 @@
+.bcard-wrapper{
+  display: block;
+  margin: 20px 0px;
+  border-radius: 5px;
+  padding: 0px;
+  border: 1px solid #e0e0e0;
+}
+.bcard-wrapper:hover{
+  opacity: 0.7 ;
+}
+.bcard-main{
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.withogimg{
+  padding-right: 120px;
+  
+}
+.bcard-img {
+width: 120px;
+height: 100%; 
+border-radius: 0 5px 5px 0;
+position: absolute;
+  top: 0;
+  right: 0;
+  background-size:cover;
+  background-position:center center;
+}
+.bcard-title{
+  font-size: 17px;
+  margin: 17px 15px 0 15px;
+  line-height: 1.4;
+  max-height: 47px;
+  color:#424242;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-weight: bold;
+}
+.bcard-description {
+  line-height: 1.5;
+  font-size: 12px;
+  color:#857f7f;
+  margin: 7px 15px 17px 15px;
+  max-height: 72px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.bcard-wrapper a{color:#424242;}
+.bcard-wrapper a:hover,.bcard-url a:hover,.bcard-site a:hover{
+  text-decoration: none;
+}

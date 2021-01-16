@@ -38,7 +38,7 @@ function convertYAML(fileContents){
   const body = fileContents.split('---')[2]
   let header = '---\n'
   keys.forEach((element)=>{
-    if (element[element.length-1] === "'"){
+    if (element[element.length-1] === "'" || element.includes("tags")){
       header += element + '\n'
     } else {
       const key = element.split(': ')[0]
