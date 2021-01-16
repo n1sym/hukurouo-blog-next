@@ -64,7 +64,6 @@ function convertYAML(fileContents){
 export function getAllPages(){
   const fileNames = fs.readdirSync(postsDirectory)
   const pagesCount = (fileNames.length) / 20
-  console.log(pagesCount)
   return [1,2,3,4,5,6,7,8,9,10].map(fileName => {
     return {
       params: {

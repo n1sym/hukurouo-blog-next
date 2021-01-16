@@ -22,7 +22,7 @@ export default function articles({ allPostsData }: {allPostsData:any}) {
               })}
             </div>
           </div>
-          <div className="text-gray-700 text-base mt-2 mb-8">{description}</div>
+          <div className="text-gray-600 text-sm mt-3 mb-8">{description}</div>
         </li>
       ))}
     </ul>

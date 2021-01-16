@@ -13,7 +13,7 @@ export default function Home({ allPostsData, nextPage }) {
         <title>{siteTitle}</title>
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
-      <section className="mb-16">
+      <section className="mb-8">
         <Articles allPostsData={allPostsData}/>
       </section>
       <section className="mb-16">
