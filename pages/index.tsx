@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
       </section>
       <section className="mb-16">
         <Link href={`/page/2`}>
-         <a className="text-xl font-semibold text-link-blue">next page</a>
+         <a className="text-xl font-semibold text-link-blue">next</a>
         </Link>
       </section>
     </Layout>
