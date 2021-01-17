@@ -11,6 +11,12 @@ export default function Home({ allPostsData }) {
       {/* Keep the existing code here */}
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          property="og:image"
+          content={`https://firebasestorage.googleapis.com/v0/b/hukurouo.appspot.com/o/image%2Fwh.png?alt=media&token=5adfeea7-d45b-463e-b2f4-edceae1ab06e`}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary" />
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className="mb-8">

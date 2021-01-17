@@ -14,6 +14,9 @@ module.exports = {
       borderWidth: {
         '6': '6px',
       },
+      padding: {
+        'tiny': '3.3px'
+      },
     },
   },
   variants: {

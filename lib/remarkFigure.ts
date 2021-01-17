@@ -23,7 +23,9 @@ function ontext(node, parents) {
   const lines = value.split('\n')
 
   if (lines.length > 2) return
-  const [imgPath, caption] = lines
+  let [imgPath, caption] = lines
+
+  if(imgPath.includes('\r')){imgPath = imgPath.split('\r')[0]}
 
   if ((isUrl(imgPath) || isImgPath(imgPath)) && isImgExt(imgPath)) {
     let interactive = false
