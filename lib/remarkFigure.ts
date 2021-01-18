@@ -26,7 +26,7 @@ function ontext(node, parents) {
   let [imgPath, caption] = lines
 
   if(imgPath.includes('\r')){imgPath = imgPath.split('\r')[0]}
-
+  if(!caption){caption = ''}
   if ((isUrl(imgPath) || isImgPath(imgPath)) && isImgExt(imgPath)) {
     let interactive = false
     let length = parents.length

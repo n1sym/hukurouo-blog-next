@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./layout.module.css";
 
 const name = "hukurouo.com 🦉";
-export const siteTitle = "hukurouo.com";
+export const siteTitle = "hukurouo";
 
 type typeLayout = {
   children: React.ReactNode;

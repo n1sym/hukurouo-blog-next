@@ -10,9 +10,10 @@ description: 神代類くんの信念、そして天馬司くんの矜持につ�
 
 potatoになっていくを聴きながらイベント感想を書いていきたいと思います。以下、オタクの妄言です。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Dun11cIEo9s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 <br><br>
+
 
 初っ端のるいねね。類くんが楽しそうだと嬉しい寧々さんなんですよね。本当に嬉しそうな声音で、表情（Live2Dがマジで良い）で微笑むんですよ。るいねね･･････。
 

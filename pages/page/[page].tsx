@@ -31,9 +31,17 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
       ) : (
         <>
           <section className="mb-16">
-            <Link href={`/page/${prevPage}`}>
-              <a className="text-xl font-semibold text-link-blue mr-8">prev</a>
-            </Link>
+            {prevPage == 0 ? (
+              <></>
+            ) : (
+              <>
+                <Link href={`/page/${prevPage}`}>
+                  <a className="text-xl font-semibold text-link-blue mr-8">
+                    prev
+                  </a>
+                </Link>
+              </>
+            )}
             <Link href={`/page/${nextPage}`}>
               <a className="text-xl font-semibold text-link-blue">next</a>
             </Link>
