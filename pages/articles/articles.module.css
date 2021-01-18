@@ -44,7 +44,7 @@
     @apply bg-transparent p-0 leading-6 block;
   }
   blockquote{
-    @apply border-l-4 border-gray-400 text-gray-600 pr-3 pl-4 py-0.5 bg-gray-100;
+    @apply text-gray-500 pr-3 pl-4 py-0.5 bg-gray-100;
   }
   img {
     @apply sm:max-w-screen-sm mx-auto mt-8 mb-2;
