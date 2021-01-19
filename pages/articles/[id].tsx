@@ -25,7 +25,7 @@ export default function Post({ postData }) {
           </>
         )}
       </Head>
-      <article className={`${styles.article} mt-16 mb-36`}>
+      <article className={`${styles.article} mt-16 mb-8`}>
         <div className="text-2xl font-bold leading-snug	">{postData.title}</div>
         <div className="text-gray-500 mt-2 mb-8">{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

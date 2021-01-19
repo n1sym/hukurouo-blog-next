@@ -76,6 +76,13 @@ export default function Layout({ children, home }: typeLayout) {
         </div>
       </header>
       <main>{children}</main>
+      {!home && (
+        <div className="text-blue-500  mb-24">
+          <Link href="/">
+            <a>← Back to home</a>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
