@@ -5,6 +5,10 @@ import { getSortedPostsData } from "../lib/posts";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>

@@ -4,6 +4,10 @@ import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styles from "./articles.module.css";
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 export default function Post({ postData }) {
   return (
     <Layout>
