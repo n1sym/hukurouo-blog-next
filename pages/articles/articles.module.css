@@ -1,5 +1,5 @@
 .article {
-  line-height: 1.6;
+  line-height: 1.7;
   h1,
   h2,
   h3,
@@ -32,7 +32,7 @@
     @apply my-8 border-none	;
   }
   p {
-    @apply my-4;
+    @apply my-6;
   }
   code {
     @apply bg-gray-100 px-1 py-0.5 mx-1 text-sm rounded;
@@ -53,6 +53,6 @@
     @apply text-center;
   }
   figcaption{
-    @apply text-gray-400 mb-12 text-base;
+    @apply text-gray-400 mb-8 text-base;
   }
 }
