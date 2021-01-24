@@ -5,7 +5,7 @@ categories: 感想文
 tags: [漫画]
 toc_flg: false
 description: 自分の気持ちを抑えて周囲に合わせて生活している主人公が、ダンスの自由さに惹かれ、のめり込んでいく物語
-thumbnail: https://firebasestorage.googleapis.com/v0/b/hukurouo.appspot.com/o/images%2Fimage0.png?alt=media&token=1f4b41b6-c71c-4965-8022-5de78b0f0e4b
+thumbnail: https://i.imgur.com/HUpzNUZl.jpg
 ---
 
 自分の気持ちを抑えて、周囲に合わせて生活している主人公。『ワンダンス』は、そんな彼がダンスの自由さに惹かれ、のめり込んでいく物語。
