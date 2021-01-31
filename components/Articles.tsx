@@ -9,7 +9,7 @@ export default function articles({
 }) {
   return (
     <ul className="">
-      {allPostsData.map(({ id, date, title, tags}) => (
+      {allPostsData.map(({ id, date, title, tags, description}) => (
         <li className="mb-3" key={id}>
           <Link href={`/articles/${id}`}>
             <a className="text-lg font-semibold text-link-blue ">{title}</a>
@@ -34,7 +34,9 @@ export default function articles({
               </>
             )}
           </div>
-          <div className="text-gray-600 text-sm mt-3 mb-8"></div>
+          <div className="text-gray-600 text-sm mt-3 mb-8">
+            
+          </div>
         </li>
       ))}
     </ul>
