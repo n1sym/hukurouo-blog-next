@@ -9,7 +9,7 @@ export default function articles({
 }) {
   return (
     <ul className="">
-      {allPostsData.map(({ id, date, title, tags, description}) => (
+      {allPostsData.map(({ id, date, title, tags}) => (
         <li className="mb-3" key={id}>
           <Link href={`/articles/${id}`}>
             <a className="text-lg font-semibold text-link-blue ">{title}</a>

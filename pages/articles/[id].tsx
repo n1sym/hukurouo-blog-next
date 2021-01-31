@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styles from "./articles.module.css";
+import Link from "next/link";
 
 export const config = {
   unstable_runtimeJS: false,
@@ -34,6 +35,16 @@ export default function Post({ postData }) {
         <div className="text-gray-500 mt-2 mb-8">{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      {postData.tags.includes("良かった作品") ? (
+        <>
+          <li>
+            <span className="text-blue-500">
+          <Link href={`/tag/良かった作品`}>
+            過去の良かった作品　記事一覧
+          </Link></span>
+          </li>
+        </>
+      ) : (<></>)}
     </Layout>
   );
 }
