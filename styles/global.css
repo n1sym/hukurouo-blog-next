@@ -24,19 +24,3 @@
     @apply hover:opacity-70 break-all;
   }
 }
-
-body {
-    margin: 0;
-    font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.8;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}

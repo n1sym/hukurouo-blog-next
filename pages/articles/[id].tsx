@@ -30,7 +30,7 @@ export default function Post({ postData }) {
           </>
         )}
       </Head>
-      <article className={`${styles.article} mt-16 mb-8`}>
+      <article className={`${styles.article} mt-16 mb-8 lg:text-lg`}>
         <div className="text-2xl font-bold leading-snug	">{postData.title}</div>
         <div className="text-gray-500 mt-2 mb-8">{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
@@ -38,7 +38,7 @@ export default function Post({ postData }) {
       {postData.tags.includes("良かった作品") ? (
         <>
           <li>
-            <span className="text-blue-500">
+            <span className="text-blue-500 lg:text-lg">
           <Link href={`/tag/良かった作品`}>
             過去の良かった作品　記事一覧
           </Link></span>
