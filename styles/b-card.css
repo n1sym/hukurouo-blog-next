@@ -41,7 +41,7 @@ position: absolute;
 }
 .bcard-description {
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 13px;
   color:#857f7f;
   margin: 7px 15px 17px 15px;
   max-height: 72px;
@@ -53,4 +53,20 @@ position: absolute;
 .bcard-wrapper a{color:#424242;}
 .bcard-wrapper a:hover,.bcard-url a:hover,.bcard-site a:hover{
   text-decoration: none;
+}
+@media screen and (min-width: 640px) {
+  .bcard-img {
+    width: 200px;
+    height: 100%; 
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+      top: 0;
+      right: 0;
+      background-size:cover;
+      background-position:center center;
+    }
+    .withogimg{
+      padding-right: 200px;
+      
+    }
 }
