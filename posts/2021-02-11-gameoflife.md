@@ -5,7 +5,7 @@ categories: 技術
 tags: []
 toc_flg: false
 description: 
-thumbnail: https://i.imgur.com/8bf1eYpl.png
+thumbnail: https://i.imgur.com/1dUkirGl.png
 ---
 
 https://gameoflife.hukurouo.com/
