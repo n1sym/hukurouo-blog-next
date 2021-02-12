@@ -35,7 +35,7 @@ export default function Post({ postData }) {
         <div className="text-gray-500 mt-2 mb-8">{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      {postData.tags.includes("良かった作品") ? (
+      {postData.tags.includes("良かった作品") && (
         <>
           <li>
             <span className="text-blue-500 lg:text-lg">
@@ -44,7 +44,7 @@ export default function Post({ postData }) {
           </Link></span>
           </li>
         </>
-      ) : (<></>)}
+      )}
     </Layout>
   );
 }

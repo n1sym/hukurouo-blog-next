@@ -55,4 +55,7 @@
   figcaption{
     @apply text-gray-400 mb-8 text-base;
   }
+  iframe {
+    @apply max-w-full mx-auto ;
+  }
 }
