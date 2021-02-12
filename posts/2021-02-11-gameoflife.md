@@ -1,5 +1,5 @@
 ---
-title: 『ライフゲーム』を作った
+title: ライフゲームを作った
 date: 2021-02-11
 categories: 技術
 tags: []

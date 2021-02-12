@@ -1,5 +1,5 @@
 ---
-title: 『ワンダンス』(1-4巻) 感想
+title: 『ワンダンス』 感想
 date: 2020-12-26
 categories: 感想文
 tags: [漫画]
