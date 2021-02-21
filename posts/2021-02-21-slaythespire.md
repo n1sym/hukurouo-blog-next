@@ -1,6 +1,6 @@
 ---
 title: 『Slay the Spire』が面白い
-date: 2020-02-13
+date: 2020-02-21
 categories: 感想文
 tags: [ゲーム]
 toc_flg: false
