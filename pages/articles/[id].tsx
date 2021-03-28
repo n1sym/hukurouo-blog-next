@@ -37,7 +37,7 @@ export default function Post({ postData }) {
       </article>
       {postData.tags.includes("良かった作品") && (
         <>
-          <li>
+          <li className="mt-16">
             <span className="text-blue-500 lg:text-lg">
           <Link href={`/tag/良かった作品`}>
             過去の良かった作品　記事一覧
