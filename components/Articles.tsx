@@ -12,7 +12,7 @@ export default function articles({
       {allPostsData.map(({ id, date, title, tags}) => (
         <li className="mb-3" key={id}>
           <Link href={`/articles/${id}`}>
-            <a className="text-lg font-semibold text-gray-700 ">{title}</a>
+            <a className="text-lg font-semibold text-link-blue ">{title}</a>
           </Link>
           <div className="flex mt-0.5">
             <div className="text-gray-600 text-base pt-tiny">{date} :</div>
