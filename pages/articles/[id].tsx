@@ -24,7 +24,7 @@ export default function Post({ postData }) {
           <>
             <meta
               property="og:image"
-              content={`https://firebasestorage.googleapis.com/v0/b/hukurouo.appspot.com/o/image%2Fwh.png?alt=media&token=5adfeea7-d45b-463e-b2f4-edceae1ab06e`}
+              content={`https://i.imgur.com/zqYqdED.png`}
             />
             <meta name="twitter:card" content="summary" />
           </>
