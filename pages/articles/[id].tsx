@@ -24,7 +24,7 @@ export default function Post({ postData }) {
           <>
             <meta
               property="og:image"
-              content={`https://i.imgur.com/zqYqdED.png`}
+              content={`https://i.imgur.com/s123HpM.png`}
             />
             <meta name="twitter:card" content="summary" />
           </>

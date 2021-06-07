@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
         <meta
           property="og:image"
-          content={`https://i.imgur.com/zqYqdED.png`}
+          content={`https://i.imgur.com/s123HpM.png`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary" />
