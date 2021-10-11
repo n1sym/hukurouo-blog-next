@@ -47,9 +47,14 @@ export default function Home() {
       <ul className="list-disc pl-5">
       {navigations.map(({ name, url}) => (
         <li className="my-2" key={name}>
-          <Link href={`${url}`}>
-            <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+          {name=="Blog" ? (
+            <Link href={`${url}`}>
+            <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
           </Link>
+        ):(<><Link href={`${url}`}>
+        <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+      </Link></>)}
+          
         </li>
       ))}
       </ul>
