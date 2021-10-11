@@ -6,14 +6,14 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 
 export default function Home({ allPostsData, tagName }) {
   return (
-    <Layout home>
+    <Layout>
       {/* Keep the existing code here */}
       <Head>
         <title>{siteTitle}</title>
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className="mb-8">
-        <div className="mb-8 text-gray-700 text-lg">
+        <div className="mb-8 text-gray-700 text-3xl font-bold my-4 font-mono">
           tags: {tagName}
         </div>
         <Articles allPostsData={allPostsData} tag/>

@@ -11,12 +11,15 @@ import Link from "next/link";
 
 export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
   return (
-    <Layout home>
+    <Layout>
       {/* Keep the existing code here */}
       <Head>
         <title>{siteTitle}</title>
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
+      <section>
+        <h1 className="text-3xl font-bold my-4 font-mono"># Blog</h1>
+      </section>
       <section className="mb-8">
         <Articles allPostsData={allPostsData} />
       </section>
@@ -24,7 +27,7 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
         <>
           <section className="mb-16">
             <Link href={`/page/${prevPage}`}>
-              <a className="text-xl font-semibold text-link-blue">prev</a>
+              <a className="text-xl font-semibold font-mono">prev</a>
             </Link>
           </section>
         </>
@@ -36,14 +39,14 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
             ) : (
               <>
                 <Link href={`/page/${prevPage}`}>
-                  <a className="text-xl font-semibold text-link-blue mr-8">
+                  <a className="text-xl font-semibold font-mono mr-8">
                     prev
                   </a>
                 </Link>
               </>
             )}
             <Link href={`/page/${nextPage}`}>
-              <a className="text-xl font-semibold text-link-blue">next</a>
+              <a className="text-xl font-semibold font-mono">next</a>
             </Link>
           </section>
         </>
