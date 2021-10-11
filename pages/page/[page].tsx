@@ -18,7 +18,7 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section>
-        <h1 className="text-3xl font-bold my-4 font-mono"># Blog</h1>
+        <h1 className="text-3xl font-bold my-4 font-mono"># Pages</h1>
       </section>
       <section className="mb-8">
         <Articles allPostsData={allPostsData} />
