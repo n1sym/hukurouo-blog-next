@@ -31,7 +31,7 @@ export default function Post({ postData }) {
         )}
       </Head>
       <article className={`${styles.article} mt-8 mb-8 lg:text-lg`}>
-        <div className="text-3xl font-bold my-4 font-mono"># {postData.title}</div>
+        <div className="text-3xl font-bold my-4 font-mono">{postData.title}</div>
         <div className="mt-2 mb-4">{postData.date}</div>
         <div className="">
         {postData.tags.map((tag: string) => {
