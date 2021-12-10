@@ -7,6 +7,7 @@ export const config = {
 }
 
 const navigations = [
+  {name: "AtCoder", url: "https://atcoder.jp/users/hukurouo"},
   {name: "Blog", url: "/articles"},
   {name: "Blog (tech)", url: "https://tech.hukurouo.com"},
   {name: "Github", url: "https://github.com/hukurouo"},
@@ -18,10 +19,14 @@ const navigations = [
 
 const works = [
   {name: "iineum", url: "https://iineum.hukurouo.com"},
+  {name: "king halos", url: "https://king-halo.hukurouo.com/"},
   {name: "books card maker", url: "https://books-card-maker.web.app/"},
   {name: "10tuku", url: "https://10tuku.hukurouo.com/"},
   {name: "Game Of Life Mini", url: "https://gameoflife.hukurouo.com/"},
-  {name: "susumeru", url: "https://susumeru.herokuapp.com/index"}
+  {name: "susumeru", url: "https://susumeru.herokuapp.com/index"},
+  {name: "hit and blow", url: "https://game-club.vercel.app/hitandblow/"},
+  {name: "space clock", url: "https://space-clock.hukurouo.com/"},
+  {name: "voxel works", url: "https://voxel.hukurouo.com/"}
 ]
 
 export default function Home() {
