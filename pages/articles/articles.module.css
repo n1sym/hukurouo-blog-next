@@ -10,7 +10,7 @@
     @apply text-2xl font-bold my-4 font-mono;
   }
   h2 {
-    @apply text-2xl font-bold font-mono;
+    @apply text-2xl font-bold font-mono pt-4;
   }
   h3 {
     @apply text-2xl font-bold font-mono;
