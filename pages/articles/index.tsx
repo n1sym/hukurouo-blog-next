@@ -15,12 +15,7 @@ export default function Home({ allPostsData }) {
       {/* Keep the existing code here */}
       <Head>
         <title>{siteTitle}</title>
-        <meta
-          property="og:image"
-          content={`https://i.imgur.com/s123HpM.png`}
-        />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary" />
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section>
