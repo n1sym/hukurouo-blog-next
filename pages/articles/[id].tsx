@@ -31,6 +31,11 @@ export default function Post({ postData }) {
                   })}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="border mt-8 mb-8"></div>
+        <span>twitter: </span>
+        <Link href={`https://twitter.com/hukurouo`}>
+          <a className="text-gray-800 leading-7 text-lg " target="_blank" rel="noopener">{"@hukurouo"}</a>
+        </Link>
       </article>
       
     </Layout>
