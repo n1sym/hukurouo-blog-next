@@ -10,7 +10,7 @@ const navigations = [
   {name: "AtCoder", url: "https://atcoder.jp/users/hukurouo"},
   {name: "Blog", url: "/articles"},
   {name: "Blog (tech)", url: "https://tech.hukurouo.com"},
-  {name: "Github", url: "https://github.com/hukurouo"},
+  {name: "Github", url: "https://github.com/n1sym"},
   {name: "Tumbler", url: "https://hukurouo.tumblr.com"},
   {name: "Twitter", url: "https://twitter.com/hukurouo"},
   {name: "Twitter (tech)", url: "https://twitter.com/n1sym"},
