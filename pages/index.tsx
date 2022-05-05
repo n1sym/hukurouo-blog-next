@@ -13,18 +13,17 @@ const navigations = [
   {name: "Github", url: "https://github.com/hukurouo"},
   {name: "Tumbler", url: "https://hukurouo.tumblr.com"},
   {name: "Twitter", url: "https://twitter.com/hukurouo"},
-  {name: "Twitter2", url: "https://twitter.com/hukurouo_code"},
+  {name: "Twitter (tech)", url: "https://twitter.com/n1sym"},
   {name: "Zenn", url: "https://zenn.dev/hukurouo"},
 ]
 
 const works = [
   {name: "iineum", url: "https://iineum.hukurouo.com"},
   {name: "king halos", url: "https://king-halo.hukurouo.com/"},
+  {name: "leading jockey", url: "https://leading-jockey.vercel.app/"},
   {name: "books card maker", url: "https://books-card-maker.web.app/"},
   {name: "10tuku", url: "https://10tuku.hukurouo.com/"},
   {name: "Game Of Life Mini", url: "https://gameoflife.hukurouo.com/"},
-  {name: "susumeru", url: "https://susumeru.herokuapp.com/index"},
-  {name: "hit and blow", url: "https://game-club.vercel.app/hitandblow/"},
   {name: "space clock", url: "https://space-clock.hukurouo.com/"},
   {name: "voxel works", url: "https://voxel.hukurouo.com/"}
 ]
