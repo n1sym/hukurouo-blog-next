@@ -16,25 +16,14 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
         <meta name="og:title" content={postData.title} />
       </Head>
-      <article className={`${styles.article} mt-8 mb-8 lg:text-lg`}>
-        <div className="text-3xl font-bold my-4 font-mono">{postData.title}</div>
+      <article className={`${styles.article} mt-8 mb-8`}>
+        <div className="text-2xl font-bold my-4">{postData.title}</div>
         <div className="mt-2 mb-4">{postData.date}</div>
-        <div className="">
-        {postData.tags.map((tag: string) => {
-                    return (
-                      <Link href={`/tag/${tag}`} key={tag}>
-                        <a>
-                          <span className="text-gray-800 underline"> # {tag}</span>
-                        </a>
-                      </Link>
-                    );
-                  })}
-        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="border mt-8 mb-8"></div>
         <span>twitter: </span>
         <Link href={`https://twitter.com/hukurouo`}>
-          <a className="text-gray-800 leading-7 text-lg " target="_blank" rel="noopener">{"@hukurouo"}</a>
+          <a className="text-gray-800 leading-7" target="_blank" rel="noopener">{"@hukurouo"}</a>
         </Link>
       </article>
       

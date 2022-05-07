@@ -43,11 +43,11 @@ export default function Home() {
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className="mb-8">
-        <h1 className="text-3xl font-bold my-4 font-mono"># hukurouo.com</h1>
-        <img src="https://avatars.githubusercontent.com/u/49607363?v=4" width="200" height="200"></img>
+        <h1 className="text-2xl font-bold mb-4">hukurouo.com</h1>
+        <img src="https://avatars.githubusercontent.com/u/49607363?v=4" width="100" height="100"></img>
       </section>
       <section className="mb-8">
-        <h1 className="text-3xl font-bold my-4 font-mono"># Navigation</h1>
+        <h1 className="text-xl font-bold my-4"># Navigation</h1>
       <ul className="list-disc pl-5">
       {navigations.map(({ name, url}) => (
         <li className="my-2" key={name}>
@@ -64,7 +64,7 @@ export default function Home() {
       </ul>
       </section>
       <section className="mb-8">
-        <h1 className="text-3xl font-bold my-4 font-mono"># Works</h1>
+        <h1 className="text-xl font-bold my-4"># Works</h1>
         <ul className="list-disc pl-5">
       {works.map(({ name, url}) => (
         <li className="my-2" key={name}>

@@ -1,5 +1,4 @@
 .article {
-  line-height: 1.7;
   h1,
   h2,
   h3,
@@ -7,19 +6,19 @@
     @apply font-bold mt-8 mb-4;
   }
   h1 {
-    @apply text-2xl font-bold my-4 font-mono;
+    @apply text-xl font-bold my-4;
   }
   h2 {
-    @apply text-2xl font-bold font-mono pt-4;
+    @apply text-xl font-bold pt-4;
   }
   h3 {
-    @apply text-2xl font-bold font-mono;
+    @apply text-xl font-bold;
   }
   a {
-    @apply text-blue-500;
+    @apply text-blue-600 underline;
   }
   h4 {
-    @apply text-lg font-mono;
+    @apply text-lg;
   }
   ol,
   ul {
@@ -32,7 +31,7 @@
     @apply my-8 border-none	;
   }
   p {
-    @apply my-6;
+    @apply my-4;
   }
   code {
     @apply bg-gray-100 px-1 py-0.5 mx-1 text-sm rounded;

@@ -13,17 +13,17 @@ type typeLayout = {
 export default function Layout({ children, home }: typeLayout) {
   return (
     <div className={styles.container}>
-      <header className="mb-6">
+      <header className="">
         {!home && (
           <>
             <div className="text-lg">
               <Link href="/">
-                <a className="text-gray-700 underline">{name}</a>
+                <a className="underline">{name}</a>
               </Link>
 
               <span> {">"} </span>
               <Link href="/articles">
-                <a className="text-gray-700 underline">{"blog"}</a>
+                <a className="underline">{"blog"}</a>
               </Link>
             </div>
           </>

@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section>
-        <h1 className="text-3xl font-bold my-4 font-mono"># Tags</h1>
+        <h1 className="text-xl font-bold my-4"># Tags</h1>
       </section>
       {["良かった作品","ノベルゲーム","漫画"].map((tag: string) => {
                     return (
@@ -31,14 +31,14 @@ export default function Home({ allPostsData }) {
                     );
                   })}
       <section>
-        <h1 className="text-3xl font-bold my-4 font-mono"># Pages</h1>
+        <h1 className="text-xl font-bold my-4"># Pages</h1>
       </section>
       <section className="mb-8">
         <Articles allPostsData={allPostsData}/>
       </section>
-      <section className="mb-16">
+      <section className="mb-8">
         <Link href={`/page/2`}>
-         <a className="text-xl font-semibold font-mono">next</a>
+         <a className="text-xl font-semibold">next</a>
         </Link>
       </section>
     </Layout>

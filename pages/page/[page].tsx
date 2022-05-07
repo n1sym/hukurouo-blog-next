@@ -18,35 +18,47 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
       </Head>
       {/* Add this <section> tag below the existing <section> tag */}
       <section>
-        <h1 className="text-3xl font-bold my-4 font-mono"># Pages</h1>
+        <h1 className="text-xl font-bold my-4"># Tags</h1>
+      </section>
+      {["良かった作品","ノベルゲーム","漫画"].map((tag: string) => {
+                    return (
+                      <Link href={`/tag/${tag}`} key={tag}>
+                        <a className="mr-3">
+                          <span className="text-gray-700 underline"> #{tag} </span>
+                        </a>
+                      </Link>
+                    );
+                  })}
+      <section>
+        <h1 className="text-xl font-bold my-4"># Pages</h1>
       </section>
       <section className="mb-8">
         <Articles allPostsData={allPostsData} />
       </section>
       {pagesCount + 1 == nextPage ? (
         <>
-          <section className="mb-16">
+          <section className="mb-8">
             <Link href={`/page/${prevPage}`}>
-              <a className="text-xl font-semibold font-mono">prev</a>
+              <a className="text-xl font-semibold">prev</a>
             </Link>
           </section>
         </>
       ) : (
         <>
-          <section className="mb-16">
+          <section className="mb-8">
             {prevPage == 0 ? (
               <></>
             ) : (
               <>
                 <Link href={`/page/${prevPage}`}>
-                  <a className="text-xl font-semibold font-mono mr-8">
+                  <a className="text-xl font-semibold mr-8">
                     prev
                   </a>
                 </Link>
               </>
             )}
             <Link href={`/page/${nextPage}`}>
-              <a className="text-xl font-semibold font-mono">next</a>
+              <a className="text-xl font-semibold">next</a>
             </Link>
           </section>
         </>
