@@ -17,8 +17,8 @@ export default function Post({ postData }) {
         <meta name="og:title" content={postData.title} />
       </Head>
       <article className={`${styles.article} mt-8 mb-8`}>
-        <div className="text-2xl font-bold my-4">{postData.title}</div>
         <div className="mt-2 mb-4">{postData.date}</div>
+        <div className="text-2xl font-bold mb-8">{postData.title}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="border mt-8 mb-8"></div>
         <span>twitter: </span>

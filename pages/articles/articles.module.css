@@ -9,7 +9,7 @@
     @apply text-xl font-bold my-4;
   }
   h2 {
-    @apply text-xl font-bold pt-4;
+    @apply text-xl font-bold;
   }
   h3 {
     @apply text-xl font-bold;
