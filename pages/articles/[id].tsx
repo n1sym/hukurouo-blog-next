@@ -4,31 +4,9 @@ import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styles from "./articles.module.css";
 import Link from "next/link";
-import { useState } from 'react'
-
-export const config = {
-  unstable_runtimeJS: false,
-}
+import { IineButton } from "../../components/IineButton";
 
 export default function Post({ postData }) {
-  const [isDisplay, setIsDisplay] = useState(false)
-  function postIine(title: string) {
-    const url = postData.url
-    const data = {"username":"blog", "content": title + "がいいねされました"}
-    fetch(url, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify(data),
-    }).catch(error => console.error(error));
-    toggleDisplay()
-  }
-  function toggleDisplay() {
-    setIsDisplay(!isDisplay)
-  }
-
   return (
     <Layout>
       <Head>
@@ -44,10 +22,7 @@ export default function Post({ postData }) {
         <Link href={`https://twitter.com/hukurouo`}>
           <a className="text-gray-800 leading-7" target="_blank" rel="noopener">{"@hukurouo"}</a>
         </Link> 
-        <button className="bg-transparent text-blue-700 border py-2 px-4 ml-4 mr-2 rounded-full hover:bg-gray-100" disabled={isDisplay ? true : false } onClick={() => postIine(postData.title)}>
-          👍
-        </button>
-        <span className="input-group" style={{ display: isDisplay ? '' : 'none' }}> {"<"} thank you ! </span>
+        <IineButton webhook_url={postData.url} title={postData.title}/>
       </article>
     </Layout>
   );
