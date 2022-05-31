@@ -167,10 +167,11 @@ export async function getPostData(id: string) {
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-
+  let url = "";
   // Combine the data with the id and contentHtml
   return {
     id,
+    url,
     contentHtml,
     ...matterResult.data,
   };

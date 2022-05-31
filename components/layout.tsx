@@ -30,7 +30,7 @@ export default function Layout({ children, home }: typeLayout) {
         )}
       </header>
       <main>{children}</main>
-      <div className="mb-24"></div>
+      <div className="mb-16"></div>
     </div>
   );
 }
