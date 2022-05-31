@@ -15,7 +15,7 @@ export default function Post({ postData }) {
       </Head>
       <article className={`${styles.article} mt-8 mb-4`}>
         <div className="text-2xl font-bold mb-4">{postData.title}</div>
-        <div className="mt-2 mb-4">{postData.date}</div>
+        <div className="mt-2 mb-4 text-gray-500">{postData.date}</div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="border mt-8 mb-8"></div>
         <span>twitter: </span>

@@ -4,7 +4,6 @@ export function IineButton({webhook_url, title}:{webhook_url: string, title: str
   const [isDisplay, setIsDisplay] = useState(false)
 
   function postIine(title: string) {
-    console.log("iine!")
     const url = webhook_url
     const data = {"username":"blog", "content": title + "がいいねされました"}
     fetch(url, {
@@ -22,7 +21,7 @@ export function IineButton({webhook_url, title}:{webhook_url: string, title: str
   }
   return (
     <>
-      <button className="bg-transparent text-blue-700 border py-2 px-4 ml-4 mr-2 rounded-full hover:bg-gray-100" disabled={isDisplay ? true : false } onClick={() => postIine(title)}>
+      <button className="bg-transparent text-blue-700 border py-1 px-4 ml-4 mr-2 rounded-full hover:bg-gray-100" disabled={isDisplay ? true : false } onClick={() => postIine(title)}>
         👍
       </button>
       <span className="input-group" style={{ display: isDisplay ? '' : 'none' }}> {"<"} thank you ! </span>
