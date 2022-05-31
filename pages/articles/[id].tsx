@@ -22,7 +22,7 @@ export default function Post({ postData }) {
         'Content-type': 'application/json'
       },
       body: JSON.stringify(data),
-  })
+    }).catch(error => console.error(error));
     toggleDisplay()
   }
   function toggleDisplay() {
