@@ -6,26 +6,24 @@ export const config = {
   unstable_runtimeJS: false,
 }
 
-const navigations = [
-  {name: "AtCoder", url: "https://atcoder.jp/users/hukurouo"},
-  {name: "Blog", url: "/articles"},
-  {name: "Blog (tech)", url: "https://tech.hukurouo.com"},
-  {name: "Github", url: "https://github.com/n1sym"},
-  {name: "Tumbler", url: "https://hukurouo.tumblr.com"},
-  {name: "Twitter", url: "https://twitter.com/hukurouo"},
-  {name: "Twitter (tech)", url: "https://twitter.com/n1sym"},
-  {name: "Zenn", url: "https://zenn.dev/hukurouo"},
+const accounts = [
+  { name: "AtCoder", url: "https://atcoder.jp/users/hukurouo" },
+  { name: "Github", url: "https://github.com/n1sym" },
+  { name: "Tumbler", url: "https://hukurouo.tumblr.com" },
+  { name: "Twitter", url: "https://twitter.com/hukurouo" },
+  { name: "Twitter (tech)", url: "https://twitter.com/n1sym" },
+  { name: "Zenn", url: "https://zenn.dev/hukurouo" },
 ]
 
 const works = [
-  {name: "iineum", url: "https://iineum.hukurouo.com"},
-  {name: "king halos", url: "https://king-halo.hukurouo.com/"},
-  {name: "leading jockey", url: "https://leading-jockey.vercel.app/"},
-  {name: "books card maker", url: "https://books-card-maker.web.app/"},
-  {name: "10tuku", url: "https://10tuku.hukurouo.com/"},
-  {name: "Game Of Life Mini", url: "https://gameoflife.hukurouo.com/"},
-  {name: "space clock", url: "https://space-clock.hukurouo.com/"},
-  {name: "voxel works", url: "https://voxel.hukurouo.com/"}
+  { name: "iineum", url: "https://iineum.hukurouo.com" },
+  { name: "king halos", url: "https://king-halo.hukurouo.com/" },
+  { name: "leading jockey", url: "https://leading-jockey.vercel.app/" },
+  { name: "books card maker", url: "https://books-card-maker.web.app/" },
+  { name: "10tuku", url: "https://10tuku.hukurouo.com/" },
+  { name: "Game Of Life Mini", url: "https://gameoflife.hukurouo.com/" },
+  { name: "space clock", url: "https://space-clock.hukurouo.com/" },
+  { name: "voxel works", url: "https://voxel.hukurouo.com/" }
 ]
 
 export default function Home() {
@@ -46,35 +44,56 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-4">hukurouo.com</h1>
         <img src="https://avatars.githubusercontent.com/u/49607363?v=4" width="100" height="100"></img>
       </section>
-      <section className="mb-8">
-        <h1 className="text-xl font-bold my-4"># Navigation</h1>
-      <ul className="list-disc pl-5">
-      {navigations.map(({ name, url}) => (
-        <li className="my-2" key={name}>
-          {name=="Blog" ? (
-            <Link href={`${url}`}>
-            <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
-          </Link>
-        ):(<><Link href={`${url}`}>
-        <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
-      </Link></>)}
-          
-        </li>
-      ))}
-      </ul>
-      </section>
-      <section className="mb-8">
-        <h1 className="text-xl font-bold my-4"># Works</h1>
+      <div className="flex flex-row flex-wrap">
+      <section className="mb-4 w-48">
+        <h1 className="text-xl font-bold my-4">Navigation</h1>
         <ul className="list-disc pl-5">
-      {works.map(({ name, url}) => (
-        <li className="my-2" key={name}>
-          <Link href={`${url}`}>
-            <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
-          </Link>
-        </li>
-      ))}
-      </ul>
+          {accounts.map(({ name, url }) => (
+            <li className="my-2" key={name}>
+              {name == "Blog" ? (
+                <Link href={`${url}`}>
+                  <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
+                </Link>
+              ) : (<><Link href={`${url}`}>
+                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              </Link></>)}
+            </li>
+          ))}
+        </ul>
       </section>
+      <section className="mb-4 w-48">
+      <h1 className="text-xl font-bold my-4">Outputs</h1>
+        <ul className="list-disc pl-5">
+          <li className="my-2">
+            <Link href={`/articles`}>
+              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link href={`https://tech.hukurouo.com`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog</a>
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link href={`https://compass.hukurouo.com/`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">compass</a>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className="mb-4 w-48">
+        <h1 className="text-xl font-bold my-4">Works</h1>
+        <ul className="list-disc pl-5">
+          {works.map(({ name, url }) => (
+            <li className="my-2" key={name}>
+              <Link href={`${url}`}>
+                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      </div>
     </Layout>
   );
 }
