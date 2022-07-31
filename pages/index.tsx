@@ -75,6 +75,11 @@ export default function Home() {
             </Link>
           </li>
           <li className="my-2">
+            <Link href={`https://simple-tech.hukurouo.com/`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog 2</a>
+            </Link>
+          </li>
+          <li className="my-2">
             <Link href={`https://compass.hukurouo.com/`}>
               <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">compass</a>
             </Link>
