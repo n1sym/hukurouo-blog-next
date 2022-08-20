@@ -21,11 +21,11 @@ export default function Home({ allPostsData }) {
       <section>
         <h1 className="text-xl font-bold my-4"># Tags</h1>
       </section>
-      {["良かった作品","ノベルゲーム","漫画"].map((tag: string) => {
+      {["良かった作品","ノベルゲーム","漫画","プロセカ"].map((tag: string) => {
                     return (
                       <Link href={`/tag/${tag}`} key={tag}>
                         <a className="mr-3">
-                          <span className="text-gray-700 underline"> #{tag} </span>
+                          <span className="text-gray-700 underline"> # {tag} </span>
                         </a>
                       </Link>
                     );

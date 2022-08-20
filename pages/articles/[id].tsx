@@ -16,6 +16,16 @@ export default function Post({ postData }) {
       <article className={`${styles.article} mt-8 mb-4`}>
         <div className="text-2xl font-bold mb-4">{postData.title}</div>
         <div className="mt-2 mb-4 text-gray-500">{postData.date}</div>
+        {postData.tags.map((tag: string) => {
+                    return (
+                      <Link href={`/tag/${tag}`} key={tag}>
+                        <a className="mr-3">
+                          <span className="text-gray-600 underline"> # {tag} </span>
+                        </a>
+                      </Link>
+                    );
+                  })}
+        
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="border mt-8 mb-8"></div>
         <span>twitter: </span>
