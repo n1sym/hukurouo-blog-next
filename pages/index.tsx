@@ -17,6 +17,7 @@ const accounts = [
 
 const works = [
   { name: "iineum", url: "https://iineum.hukurouo.com" },
+  { name: "pjsekai daily ranking", url: "https://pjsekai-song-daily-views.vercel.app/" },
   { name: "king halos", url: "https://king-halo.hukurouo.com/" },
   { name: "leading jockey", url: "https://leading-jockey.vercel.app/" },
   { name: "books card maker", url: "https://books-card-maker.web.app/" },
