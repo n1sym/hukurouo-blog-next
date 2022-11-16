@@ -43,17 +43,14 @@ export default function Home() {
       {/* Add this <section> tag below the existing <section> tag */}
       <section className="mb-4">
         <h1 className="text-2xl font-bold mb-4">hukurouo.com</h1>
+        
       </section>
       <div className="flex flex-row flex-wrap">
       <section className="mb-4 w-48">
+        <h1 className="text-xl font-bold my-4">Navigation</h1>
         <ul className="list-disc pl-5">
-          <li className="my-1">
-            <Link href={`/articles`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
-            </Link>
-          </li>
           {accounts.map(({ name, url }) => (
-            <li className="my-1" key={name}>
+            <li className="my-2" key={name}>
               {name == "Blog" ? (
                 <Link href={`${url}`}>
                   <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
@@ -63,14 +60,50 @@ export default function Home() {
               </Link></>)}
             </li>
           ))}
-          
+          <li className="my-2">
+            <Link href={`/articles`}>
+              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            </Link>
+          </li>
         </ul>
-        <br></br>
-        <p>別名義 : <Link href={`https://n1sym.com/`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">@n1sym</a>
-            </Link></p>
       </section>
-      
+      <section className="mb-4 w-48">
+      <h1 className="text-xl font-bold my-4">Outputs</h1>
+        <ul className="list-disc pl-5">
+          <li className="my-2">
+            <Link href={`/articles`}>
+              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link href={`https://tech.hukurouo.com`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog</a>
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link href={`https://simple-tech.hukurouo.com/`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog 2</a>
+            </Link>
+          </li>
+          <li className="my-2">
+            <Link href={`https://compass.hukurouo.com/`}>
+              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">compass</a>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className="mb-4 w-48">
+        <h1 className="text-xl font-bold my-4">Works</h1>
+        <ul className="list-disc pl-5">
+          {works.map(({ name, url }) => (
+            <li className="my-2" key={name}>
+              <Link href={`${url}`}>
+                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
       </div>
     </Layout>
   );

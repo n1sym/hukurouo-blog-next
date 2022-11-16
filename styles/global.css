@@ -27,12 +27,7 @@
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue",
-  Arial,
-  "Hiragino Kaku Gothic ProN",
-  "Hiragino Sans",
-  Meiryo,
-  sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
