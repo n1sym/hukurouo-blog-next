@@ -66,7 +66,7 @@ export default function Home() {
           
         </ul>
         <br></br>
-        <p>別名義 : <Link href={`https://n1sym.com/`}>
+        <p className="leading-7 text-lg">別名義 : <Link href={`https://n1sym.com/`}>
               <a className="text-gray-800 underline leading-7 text-lg ">@n1sym</a>
             </Link></p>
       </section>
