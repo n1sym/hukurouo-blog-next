@@ -164,9 +164,9 @@ export async function getPostData(id: string) {
     .use(images)
     .use(links)
     .use(require("remark-prism"))
-    .use(html)
+    .use(html, { sanitize: false })
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+    const contentHtml = processedContent.toString();
   let url = "";
   // Combine the data with the id and contentHtml
   return {
