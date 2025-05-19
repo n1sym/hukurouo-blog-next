@@ -23,10 +23,10 @@ export default function Home({ allPostsData }) {
       </section>
       {["良かった作品","ノベルゲーム","漫画"].map((tag: string) => {
                     return (
-                      <Link href={`/tag/${tag}`} key={tag}>
-                        <a className="mr-3">
-                          <span className="text-gray-700 underline"> # {tag} </span>
-                        </a>
+                      <Link href={`/tag/${tag}`} key={tag} className="mr-3">
+
+                        <span className="text-gray-700 underline"> # {tag} </span>
+
                       </Link>
                     );
                   })}
@@ -37,8 +37,8 @@ export default function Home({ allPostsData }) {
         <Articles allPostsData={allPostsData}/>
       </section>
       <section className="mb-8">
-        <Link href={`/page/2`}>
-         <a className="text-xl font-semibold">next</a>
+        <Link href={`/page/2`} className="text-xl font-semibold">
+         next
         </Link>
       </section>
     </Layout>

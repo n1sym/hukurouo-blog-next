@@ -52,17 +52,21 @@ export default function Home() {
           {accounts.map(({ name, url }) => (
             <li className="my-2" key={name}>
               {name == "Blog" ? (
-                <Link href={`${url}`}>
-                  <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
+                <Link href={`${url}`} className="text-gray-800 underline leading-7 text-lg ">
+                  {name}
                 </Link>
-              ) : (<><Link href={`${url}`}>
-                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              ) : (<><Link
+                href={`${url}`}
+                className="text-gray-800 underline leading-7 text-lg "
+                target="_blank"
+                rel="noopener">
+                {name}
               </Link></>)}
             </li>
           ))}
           <li className="my-2">
-            <Link href={`/articles`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            <Link href={`/articles`} className="text-gray-800 underline leading-7 text-lg ">
+              Blog
             </Link>
           </li>
         </ul>
@@ -71,23 +75,35 @@ export default function Home() {
       <h1 className="text-xl font-bold my-4">Outputs</h1>
         <ul className="list-disc pl-5">
           <li className="my-2">
-            <Link href={`/articles`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            <Link href={`/articles`} className="text-gray-800 underline leading-7 text-lg ">
+              Blog
             </Link>
           </li>
           <li className="my-2">
-            <Link href={`https://tech.hukurouo.com`}>
-              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog</a>
+            <Link
+              href={`https://tech.hukurouo.com`}
+              className="text-gray-800 underline leading-7 text-lg "
+              target="_blank"
+              rel="noopener">
+              Tech Blog
             </Link>
           </li>
           <li className="my-2">
-            <Link href={`https://simple-tech.hukurouo.com/`}>
-              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">Tech Blog 2</a>
+            <Link
+              href={`https://simple-tech.hukurouo.com/`}
+              className="text-gray-800 underline leading-7 text-lg "
+              target="_blank"
+              rel="noopener">
+              Tech Blog 2
             </Link>
           </li>
           <li className="my-2">
-            <Link href={`https://compass.hukurouo.com/`}>
-              <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">compass</a>
+            <Link
+              href={`https://compass.hukurouo.com/`}
+              className="text-gray-800 underline leading-7 text-lg "
+              target="_blank"
+              rel="noopener">
+              compass
             </Link>
           </li>
         </ul>
@@ -97,8 +113,12 @@ export default function Home() {
         <ul className="list-disc pl-5">
           {works.map(({ name, url }) => (
             <li className="my-2" key={name}>
-              <Link href={`${url}`}>
-                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              <Link
+                href={`${url}`}
+                className="text-gray-800 underline leading-7 text-lg "
+                target="_blank"
+                rel="noopener">
+                {name}
               </Link>
             </li>
           ))}

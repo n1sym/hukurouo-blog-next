@@ -48,26 +48,32 @@ export default function Home() {
       <section className="mb-4 w-48">
         <ul className="list-disc pl-5">
           <li className="my-1">
-            <Link href={`/articles`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">Blog</a>
+            <Link href={`/articles`} className="text-gray-800 underline leading-7 text-lg ">
+              Blog
             </Link>
           </li>
           {accounts.map(({ name, url }) => (
             <li className="my-1" key={name}>
               {name == "Blog" ? (
-                <Link href={`${url}`}>
-                  <a className="text-gray-800 underline leading-7 text-lg ">{name}</a>
+                <Link href={`${url}`} className="text-gray-800 underline leading-7 text-lg ">
+                  {name}
                 </Link>
-              ) : (<><Link href={`${url}`}>
-                <a className="text-gray-800 underline leading-7 text-lg " target="_blank" rel="noopener">{name}</a>
+              ) : (<><Link
+                href={`${url}`}
+                className="text-gray-800 underline leading-7 text-lg "
+                target="_blank"
+                rel="noopener">
+                {name}
               </Link></>)}
             </li>
           ))}
           
         </ul>
         <br></br>
-        <p className="leading-7 text-lg">別名義 : <Link href={`https://n1sym.com/`}>
-              <a className="text-gray-800 underline leading-7 text-lg ">@n1sym</a>
+        <p className="leading-7 text-lg">別名義 : <Link
+          href={`https://n1sym.com/`}
+          className="text-gray-800 underline leading-7 text-lg ">
+              @n1sym
             </Link></p>
       </section>
       

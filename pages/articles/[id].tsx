@@ -18,10 +18,10 @@ export default function Post({ postData }) {
         <div className="mt-2 mb-4 text-gray-500">{postData.date}</div>
         {postData.tags.map((tag: string) => {
                     return (
-                      <Link href={`/tag/${tag}`} key={tag}>
-                        <a className="mr-3">
-                          <span className="text-gray-600 underline"> # {tag} </span>
-                        </a>
+                      <Link href={`/tag/${tag}`} key={tag} className="mr-3">
+
+                        <span className="text-gray-600 underline"> # {tag} </span>
+
                       </Link>
                     );
                   })}
@@ -29,8 +29,12 @@ export default function Post({ postData }) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         <div className="border mt-8 mb-8"></div>
         <span>twitter: </span>
-        <Link href={`https://twitter.com/hukurouo`}>
-          <a className="text-gray-800 leading-7" target="_blank" rel="noopener">{"@hukurouo"}</a>
+        <Link
+          href={`https://twitter.com/hukurouo`}
+          className="text-gray-800 leading-7"
+          target="_blank"
+          rel="noopener">
+          {"@hukurouo"}
         </Link> 
         <IineButton webhook_url={postData.url} title={postData.title}/>
       </article>

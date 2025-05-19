@@ -11,8 +11,8 @@ export default function articles({
     <ul className="list-disc pl-5">
       {allPostsData.map(({ id, date, title, tags}) => (
         <li className="" key={id}>
-          <Link href={`/articles/${id}`}>
-            <a className="text-gray-800 leading-7 text-lg ">{title}</a>
+          <Link href={`/articles/${id}`} className="text-gray-800 leading-7 text-lg ">
+            {title}
           </Link>
         </li>
       ))}

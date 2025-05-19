@@ -22,10 +22,10 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
       </section>
       {["良かった作品","ノベルゲーム","漫画"].map((tag: string) => {
                     return (
-                      <Link href={`/tag/${tag}`} key={tag}>
-                        <a className="mr-3">
-                          <span className="text-gray-700 underline"> #{tag} </span>
-                        </a>
+                      <Link href={`/tag/${tag}`} key={tag} className="mr-3">
+
+                        <span className="text-gray-700 underline"> #{tag} </span>
+
                       </Link>
                     );
                   })}
@@ -38,8 +38,8 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
       {pagesCount + 1 == nextPage ? (
         <>
           <section className="mb-8">
-            <Link href={`/page/${prevPage}`}>
-              <a className="text-xl font-semibold">prev</a>
+            <Link href={`/page/${prevPage}`} className="text-xl font-semibold">
+              prev
             </Link>
           </section>
         </>
@@ -50,15 +50,15 @@ export default function Home({ allPostsData, nextPage, pagesCount, prevPage }) {
               <></>
             ) : (
               <>
-                <Link href={`/page/${prevPage}`}>
-                  <a className="text-xl font-semibold mr-8">
+                <Link href={`/page/${prevPage}`} className="text-xl font-semibold mr-8">
+                  
                     prev
-                  </a>
+                  
                 </Link>
               </>
             )}
-            <Link href={`/page/${nextPage}`}>
-              <a className="text-xl font-semibold">next</a>
+            <Link href={`/page/${nextPage}`} className="text-xl font-semibold">
+              next
             </Link>
           </section>
         </>

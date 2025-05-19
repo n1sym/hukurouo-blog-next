@@ -17,13 +17,13 @@ export default function Layout({ children, home }: typeLayout) {
         {!home && (
           <>
             <div className="text-lg">
-              <Link href="/">
-                <a className="underline">{name}</a>
+              <Link href="/" className="underline">
+                {name}
               </Link>
 
               <span> {">"} </span>
-              <Link href="/articles">
-                <a className="underline">{"blog"}</a>
+              <Link href="/articles" className="underline">
+                {"blog"}
               </Link>
             </div>
           </>
